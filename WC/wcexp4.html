@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Registration Form</title>
+  <style>
+    body {
+      margin: 0; padding: 0; font-family: 'Segoe UI', sans-serif;
+      display: flex; justify-content: center; align-items: center; min-height: 100vh;
+      background: linear-gradient(135deg, #6a11cb, #2575fc);
+    }
+    .container {
+      background: rgba(255, 255, 255, 0.1);
+      padding: 40px; border-radius: 15px; backdrop-filter: blur(15px);
+      box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
+      width: 380px; color: white; text-align: center;
+    }
+    h2 { margin-bottom: 20px; font-size: 28px; font-weight: bold; letter-spacing: 1px; }
+    .input-group { margin-bottom: 15px; text-align: left; }
+    label { display: block; margin-bottom: 6px; font-weight: 600; }
+    input, textarea {
+      width: 100%; padding: 12px; border: none; border-radius: 10px; outline: none;
+      font-size: 15px; background: rgba(255, 255, 255, 0.2); color: white;
+    }
+    input:focus, textarea:focus {
+      background: rgba(255, 255, 255, 0.3);
+      box-shadow: 0 0 8px rgba(255, 255, 255, 0.5);
+    }
+    .error {
+      font-size: 12px; color: #ffdde0; margin-top: 6px; display: none;
+    }
+    [aria-invalid="true"] { box-shadow: 0 0 0 2px #ff6b6b inset; }
+    button[type="submit"] {
+      margin-top: 6px; width: 100%; padding: 12px 16px;
+      background: linear-gradient(135deg, #ff416c, #ff4b2b);
+      border: none; border-radius: 10px; color: white;
+      font-size: 16px; font-weight: bold; cursor: pointer; transition: 0.3s;
+    }
+    button[type="submit"]:hover {
+      background: linear-gradient(135deg, #ff4b2b, #ff416c);
+      transform: scale(1.05);
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h2>Registration</h2>
+
+    <form id="regForm" novalidate>
+      <div class="input-group">
+        <label for="fname">First name</label>
+        <input id="fname" name="fname" type="text" required minlength="2" aria-describedby="fnameError"/>
+        <div id="fnameError" class="error" role="alert" aria-live="polite"></div>
+      </div>
+
+      <div class="input-group">
+        <label for="lname">Last name</label>
+        <input id="lname" name="lname" type="text" required minlength="2" aria-describedby="lnameError"/>
+        <div id="lnameError" class="error" role="alert" aria-live="polite"></div>
+      </div>
+
+      <div class="input-group">
+        <label for="email">Email</label>
+        <input id="email" name="email" type="email" required aria-describedby="emailError"/>
+        <div id="emailError" class="error" role="alert" aria-live="polite"></div>
+      </div>
+
+      <div class="input-group">
+        <label for="password">Password</label>
+        <input id="password" name="password" type="password" required minlength="8" aria-describedby="passwordError"/>
+        <div id="passwordError" class="error" role="alert" aria-live="polite"></div>
+      </div>
+
+      <div class="input-group">
+        <label for="mobile">Mobile number</label>
+        <input id="mobile" name="mobile" type="tel" placeholder="+14155552671" required aria-describedby="mobileError"/>
+        <div id="mobileError" class="error" role="alert" aria-live="polite"></div>
+      </div>
+
+      <div class="input-group">
+        <label for="address">Address</label>
+        <textarea id="address" name="address" required rows="3" aria-describedby="addressError"></textarea>
+        <div id="addressError" class="error" role="alert" aria-live="polite"></div>
+      </div>
+
+      <button type="submit">Register</button>
+    </form>
+  </div>
+
+  <script>
+    const form = document.getElementById('regForm');
+    const fields = Array.from(form.elements).filter(el =>
+      (el.tagName === 'INPUT' || el.tagName === 'TEXTAREA') && el.name
+    );
+
+    function showError(field) {
+      const error = document.getElement

@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Anjuman-I-Islam's Kalsekar Technical Campus</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  <style>
+    body { background-color: #f9f9f9; font-family: 'Segoe UI', sans-serif; }
+    .navbar { background-color: #0d1b4c; }
+    .navbar .nav-link, .navbar-brand { color: #f1c40f !important; font-weight: 600; }
+    .navbar .nav-link:hover { color: #ffffff !important; }
+    .hero { background: linear-gradient(135deg, #0d1b4c, #142f6a); padding: 60px 20px; }
+    .hero h1 { font-size: 2.75rem; font-weight: bold; color: #f1c40f; }
+    .section-title { color: #0d1b4c; text-align: center; font-weight: bold; margin: 50px 0 20px; }
+    .table { border: 2px solid #0d1b4c; }
+    .list-group-item { background-color: #f1c40f; color: #0d1b4c; font-weight: 600; }
+    .btn-custom { background-color: #0d1b4c; color: #f1c40f; font-weight: 600; }
+    .btn-custom:hover { background-color: #f1c40f; color: #0d1b4c; }
+    footer { background-color: #0d1b4c; color: #f1c40f; text-align: center; padding: 15px; margin-top: 30px; }
+  </style>
+</head>
+<body>
+
+  <!-- Navbar -->
+  <nav class="navbar navbar-expand-lg sticky-top">
+    <div class="container">
+      <a class="navbar-brand" href="#">AIKTC</a>
+      <button class="navbar-toggler bg-light" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item"><a class="nav-link" href="#home">Home</a></li>
+          <li class="nav-item"><a class="nav-link" href="#departments">Departments</a></li>
+          <li class="nav-item"><a class="nav-link" href="#facilities">Facilities</a></li>
+          <li class="nav-item"><a class="nav-link" href="#contact">Contact Us</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Home Section with Campus Image -->
+  <section id="home" class="hero text-white">
+    <div class="container text-center">
+      <img src="image url" alt="Anjuman-I-Islam’s Kalsekar Technical Campus" class="img-fluid rounded mb-4">
+      <h1>Anjuman-I-Islam’s Kalsekar Technical Campus</h1>
+      <p class="lead mt-3">Empowering Education in Engineering, Pharmacy & Architecture</p>
+    </div>
+  </section>
+
+  <!-- Departments Section -->
+  <section id="departments" class="container">
+    <h2 class="section-title">Our Schools & Departments</h2>
+    <div class="table-responsive">
+      <table class="table table-bordered table-striped text-center">
+        <thead class="table-dark">
+          <tr>
+            <th>School</th>
+            <th>Departments</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><strong>School of Engineering & Technology</strong></td>
+            <td>
+              Computer Engineering, CSE (Data Science), CSE (AI & ML), Mechanical Engineering, 
+              Civil Engineering, Electronics & Computer Science, Electrical & Computer Engineering
+            </td>
+          </tr>
+          <tr>
+            <td><strong>School of Pharmacy</strong></td>
+            <td>Bachelor of Pharmacy, Diploma in Pharmacy</td>
+          </tr>
+          <tr>
+            <td><strong>School of Architecture</strong></td>
+            <td>Bachelor of Architecture</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </section>
+
+  <!-- Facilities Section -->
+  <section id="facilities" class="container">
+    <h2 class="section-title">Facilities We Offer</h2>
+    <ul class="list-group mb-4">
+      <li class="list-group-item">Modern Computer Labs</li>
+      <li class="list-group-item">Central Library with Digital Access</li>
+      <li class="list-group-item">Hostel & Canteen Facilities</li>
+      <li class="list-group-item">Sports & Recreation Areas</li>
+      <li class="list-group-item">Wi-Fi Enabled Campus</li>
+    </ul>
+  </section>
+
+  <!-- Contact Section -->
+  <section id="contact" class="container">
+    <h2 class="section-title">Contact Us</h2>
+    <form class="p-4 border rounded shadow">
+      <div class="mb-3">
+        <label for="name" class="form-label">Your Name</label>
+        <input type="text" id="name" class="form-control" placeholder="Enter your name" required>
+      </div>
+      <div class="mb-3">
+        <label for="email" class="form-label">Your Email</label>
+        <input type="email" id="email" class="form-control" placeholder="Enter your email" required>
+      </div>
+      <div class="mb-3">
+        <label for="message" class="form-label">Your Message</label>
+        <textarea id="message" rows="4" class="form-control" placeholder="Write your message here"></textarea>
+      </div>
+      <button type="submit" class="btn btn-custom w-100">Send Message</button>
+    </form>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    © 2025 Anjuman-I-Islam’s Kalsekar Technical Campus | All Rights Reserved
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
